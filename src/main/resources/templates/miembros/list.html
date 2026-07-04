@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout('Lista de Miembros', ~{::main})}">
+<head></head>
+<body>
+<main>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Miembros Activos</h2>
+    <a th:href="@{/miembros/nuevo}" class="btn btn-primary">Nuevo Miembro</a>
+  </div>
+  <table class="table table-hover">
+    <thead>
+    <tr><th>ID</th><th>Cédula</th><th>Nombre Completo</th><th>Registrado Por</th><th>Estado</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="m : ${miembros}">
+      <td th:text="${m.idMiembro}"></td>
+      <td th:text="${m.numCedula}"></td>
+      <td th:text="${m.nombreCompleto}"></td>
+      <td th:text="${m.registradoPor}"></td>
+      <td th:text="${m.estado}"></td>
+    </tr>
+    </tbody>
+  </table>
+</main>
+</body>
+</html>

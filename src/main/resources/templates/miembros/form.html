@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout('Registrar Nuevo Miembro', ~{::main})}">
+<head></head>
+<body>
+<main>
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-primary">Registrar Nuevo Miembro</h2>
+            <a th:href="@{/}" class="btn btn-outline-secondary">Volver al Dashboard</a>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <!-- Formulario vinculado al objeto MiembroDTO -->
+                <form th:action="@{/miembros/guardar}" th:object="${miembro}" method="post">
+
+                    <!-- Sección 1: Información Personal -->
+                    <h5 class="text-secondary border-bottom pb-2 mb-3">Información Personal</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <label for="numCedula" class="form-label">Número de Cédula *</label>
+                            <input type="text" class="form-control" id="numCedula" th:field="*{numCedula}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nombres" class="form-label">Nombres *</label>
+                            <input type="text" class="form-control" id="nombres" th:field="*{nombres}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="apellidos" class="form-label">Apellidos *</label>
+                            <input type="text" class="form-control" id="apellidos" th:field="*{apellidos}" required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="genero" class="form-label">Género</label>
+                            <select class="form-select" id="genero" th:field="*{genero}">
+                                <option value="" selected>Seleccione...</option>
+                                <option value="MASCULINO">Masculino</option>
+                                <option value="FEMENINO">Femenino</option>
+                                <option value="OTRO">Otro</option>
+                                <option value="NO_ESPECIFICADO">Prefiero no decir</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" th:field="*{fechaNacimiento}">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="lugarExpedicion" class="form-label">Lugar de Expedición</label>
+                            <input type="text" class="form-control" id="lugarExpedicion" th:field="*{lugarExpedicion}" placeholder="Ciudad">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="vigenciaCedula" class="form-label">Vigencia de Cédula</label>
+                            <input type="date" class="form-control" id="vigenciaCedula" th:field="*{vigenciaCedula}">
+                        </div>
+                    </div>
+
+                    <!-- Sección 2: Contacto -->
+                    <h5 class="text-secondary border-bottom pb-2 mb-3">Información de Contacto</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Teléfono / Celular</label>
+                            <input type="tel" class="form-control" id="telefono" th:field="*{telefono}" placeholder="Ej: 300 123 4567">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="correo" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" th:field="*{correo}" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div class="col-12">
+                            <label for="direccion" class="form-label">Dirección de Residencia</label>
+                            <input type="text" class="form-control" id="direccion" th:field="*{direccion}">
+                        </div>
+                    </div>
+
+                    <!-- Sección 3: Datos Eclesiásticos -->
+                    <h5 class="text-secondary border-bottom pb-2 mb-3">Información Eclesiástica</h5>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <label for="estadoEspiritual" class="form-label">Estado Espiritual</label>
+                            <select class="form-select" id="estadoEspiritual" th:field="*{estadoEspiritual}">
+                                <option value="VISITA" selected>Visita</option>
+                                <option value="EN_PROCESO">En Proceso (Nuevo)</option>
+                                <option value="MIEMBRO_ACTIVO">Miembro Activo</option>
+                                <option value="BAUTIZADO">Bautizado</option>
+                                <option value="INACTIVO">Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="estado" class="form-label">Estado del Registro</label>
+                            <select class="form-select" id="estado" th:field="*{estado}">
+                                <option value="ACTIVO" selected>Activo</option>
+                                <option value="INACTIVO">Inactivo</option>
+                                <option value="ELIMINADO">Eliminado</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="grupoCelula" class="form-label">Grupo / Célula</label>
+                            <input type="text" class="form-control" id="grupoCelula" th:field="*{grupoCelula}" placeholder="Nombre del grupo">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="fechaBautismo" class="form-label">Fecha de Bautismo (Opcional)</label>
+                            <input type="date" class="form-control" id="fechaBautismo" th:field="*{fechaBautismo}" style="max-width: 300px;">
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="d-flex justify-content-end gap-2 pt-3 border-top">
+                        <a th:href="@{/}" class="btn btn-light">Cancelar</a>
+                        <button type="submit" class="btn btn-primary px-4">
+                            <i class="bi bi-save"></i> Guardar Miembro
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

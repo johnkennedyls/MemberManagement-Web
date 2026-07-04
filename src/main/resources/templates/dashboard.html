@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout('Dashboard', ~{::main})}">
+<head></head>
+<body>
+<main>
+    <div th:if="${mensajeExito}" class="alert alert-success alert-dismissible fade show mb-3">
+        <span th:text="${mensajeExito}"></span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Miembros Activos</h5>
+                    <p class="card-text fs-2" th:text="${resumen.totalMiembrosActivos}">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Nuevos este mes</h5>
+                    <p class="card-text fs-2" th:text="${resumen.nuevosEsteMes}">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Usuarios Activos</h5>
+                    <p class="card-text fs-2" th:text="${resumen.usuariosActivos}">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">📊 Informe Pastoral Inteligente</h5>
+                </div>
+                <div class="card-body">
+                    <p th:text="'Resumen: ' + ${informeIA.resumen}"></p>
+                    <p th:text="'Tendencia: ' + ${informeIA.tendencia}"></p>
+                    <p th:text="'Recomendación: ' + ${informeIA.recomendacion}"></p>
+                    <small class="text-muted">Fuente: <span th:text="${informeIA.fuente}"></span> | Generado: <span th:text="${informeIA.fechaGeneracion}"></span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">🔔 Alertas Activas</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled" th:if="${#lists.isEmpty(alertas)}">
+                        <li class="text-muted">No hay alertas pendientes.</li>
+                    </ul>
+                    <ul class="list-group list-group-flush" th:each="alerta : ${alertas}">
+                        <li class="list-group-item">
+                            <strong th:text="${alerta.tipo}"></strong><br>
+                            <span th:text="${alerta.mensaje}"></span><br>
+                            <small class="text-primary" th:text="'Acción: ' + ${alerta.accionRecomendada}"></small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Miembros Recientes</h5>
+            <a th:href="@{/miembros}" class="btn btn-sm btn-light">Ver todos</a>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                <tr><th>Cédula</th><th>Nombre</th><th>Estado</th><th>Fecha Registro</th></tr>
+                </thead>
+                <tbody>
+                <tr th:each="m : ${miembrosRecientes}">
+                    <td th:text="${m.numCedula}"></td>
+                    <td th:text="${m.nombres + ' ' + m.apellidos}"></td>
+                    <td th:text="${m.estado}"></td>
+                    <td th:text="${m.fechaRegistro}"></td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(miembrosRecientes)}">
+                    <td colspan="4" class="text-center text-muted">No hay registros recientes.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

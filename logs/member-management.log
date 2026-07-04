@@ -1,0 +1,96 @@
+2026-05-26 17:41:51 [restartedMain] INFO  c.f.m.b.BackendApiApplication - Starting BackendApiApplication using Java 21.0.6 with PID 952 (D:\FUP\2026-1\bases de datos\backend-api\backend-api\target\classes started by Usuario in D:\FUP\2026-1\bases de datos\backend-api\backend-api)
+2026-05-26 17:41:51 [restartedMain] DEBUG c.f.m.b.BackendApiApplication - Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-05-26 17:41:51 [restartedMain] INFO  c.f.m.b.BackendApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:41:51 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Usuario\.m2\repository\com\oracle\database\jdbc\ojdbc11\21.9.0.0\ojdbc11-21.9.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Usuario/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.9.0.0/oraclepki.jar
+2026-05-26 17:41:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:41:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:41:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-26 17:41:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2026-05-26 17:41:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-26 17:41:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:41:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-05-26 17:41:54 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:41:54 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2361 ms
+2026-05-26 17:41:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Starting...
+2026-05-26 17:41:54 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - MemberManagement-Pool - Added connection oracle.jdbc.driver.T4CConnection@85b9ac8
+2026-05-26 17:41:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Start completed.
+2026-05-26 17:41:54 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@localhost:1521:ORCL'
+2026-05-26 17:41:54 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-26 17:41:55 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-05-26 17:41:55 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-26 17:41:55 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-26 17:41:55 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26 17:41:57 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-26 17:42:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26 17:42:05 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: baea59c4-5cc2-44ac-801a-89d967c99260
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-26 17:42:05 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-26 17:42:05 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:42:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-05-26 17:42:06 [restartedMain] INFO  c.f.m.b.BackendApiApplication - Started BackendApiApplication in 15.297 seconds (process running for 16.441)
+2026-05-26 17:47:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26 17:47:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Shutdown initiated...
+2026-05-26 17:47:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Shutdown completed.
+2026-05-26 17:47:53 [restartedMain] INFO  c.f.m.b.BackendApiApplication - Starting BackendApiApplication using Java 21.0.6 with PID 7764 (D:\FUP\2026-1\bases de datos\backend-api\backend-api\target\classes started by Usuario in D:\FUP\2026-1\bases de datos\backend-api\backend-api)
+2026-05-26 17:47:53 [restartedMain] DEBUG c.f.m.b.BackendApiApplication - Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-05-26 17:47:53 [restartedMain] INFO  c.f.m.b.BackendApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-26 17:47:53 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\Usuario\.m2\repository\com\oracle\database\jdbc\ojdbc11\21.9.0.0\ojdbc11-21.9.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Usuario/.m2/repository/com/oracle/database/jdbc/ojdbc11/21.9.0.0/oraclepki.jar
+2026-05-26 17:47:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-26 17:47:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-26 17:47:54 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-26 17:47:54 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+2026-05-26 17:47:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-05-26 17:47:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-26 17:47:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-05-26 17:47:55 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring embedded WebApplicationContext
+2026-05-26 17:47:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2602 ms
+2026-05-26 17:47:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Starting...
+2026-05-26 17:47:56 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - MemberManagement-Pool - Added connection oracle.jdbc.driver.T4CConnection@129c52e
+2026-05-26 17:47:56 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Start completed.
+2026-05-26 17:47:56 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:oracle:thin:@localhost:1521:ORCL'
+2026-05-26 17:47:56 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-26 17:47:56 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-05-26 17:47:56 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-26 17:47:57 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-26 17:47:57 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26 17:47:59 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-26 17:48:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26 17:48:03 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 765132c9-76b2-483a-b7ff-9d9e69a130b2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-26 17:48:03 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-26 17:48:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-05-26 17:48:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-05-26 17:48:04 [restartedMain] INFO  c.f.m.b.BackendApiApplication - Started BackendApiApplication in 12.25 seconds (process running for 13.42)
+2026-05-26 17:52:39 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[localhost].[/api/v1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26 17:52:39 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-26 17:52:39 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-05-26 17:52:39 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        m1_0.id_miembro,
+        m1_0.apellidos,
+        m1_0.direccion,
+        m1_0.estado,
+        m1_0.fecha_nacimiento,
+        m1_0.fecha_registro,
+        m1_0.genero,
+        m1_0.lugar_expedicion,
+        m1_0.nombres,
+        m1_0.num_cedula,
+        m1_0.id_usuario_registra,
+        m1_0.vigencia_cedula 
+    from
+        miembros m1_0 
+    where
+        m1_0.estado=?
+2026-05-26 17:52:39 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: could not initialize proxy [com.fup.membermanagement.backend_api.model.entity.User#1] - no Session]
+2026-05-26 17:54:52 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-26 17:54:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Shutdown initiated...
+2026-05-26 17:54:52 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - MemberManagement-Pool - Shutdown completed.
